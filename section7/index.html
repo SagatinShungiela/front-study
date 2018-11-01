@@ -3,22 +3,28 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
     <title>My Photos</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
       <h1>My Photos</h1>
     </header>
-
     <div class="container">
       <div id="img_unit">
-        <div class="photo">
-          <img src="img/img01.jpg" alt="テロール教授">
-          <div class="inner"><p>コメント1</p><span>nickname</span>
-          </div>
-        </div>
-
       </div>
     </div>
+    <script>
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", "https://h2o-space.com/htmlbook/images.php");
+      ajax.responseType = "json";
+      ajax.send(null);
+
+      ajax.onreadystatechange = function(){
+        alert(ajax.readyState);
+      }
+    </script>
+
   </body>
 </html>
